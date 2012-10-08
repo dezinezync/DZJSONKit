@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 0.1
+apiversion: 2
+description: My module
+author: Your Name
+license: Specify your license
+copyright: Copyright (c) 2012 by Your Company
+
+
+# these should not be edited
+name: dzjsonkit
+moduleid: com.DZJSONKit
+guid: 5793126f-1ba8-4236-8830-ac02256c02f6
+platform: iphone
+minsdk: 2.1.1.GA
