@@ -5,8 +5,9 @@
  * and licensed under the Apache Public License (version 2)
  */
 #import "TiModule.h"
+#import "JSONKit.h"
 
-@interface ComDZJSONKitModule : TiModule 
+@interface ComDZJSONKitModule : TiModule
 {
 }
 

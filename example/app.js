@@ -13,27 +13,28 @@ win.add(label);
 win.open();
 
 // TODO: write your module tests here
-var dzjsonkit = require('com.DZJSONKit');
-Ti.API.info("module is => " + dzjsonkit);
+var kit = require('com.DZJSONKit');
+Ti.API.info("module is => " + kit);
 
-label.text = dzjsonkit.example();
+label.text = kit.example();
 
-Ti.API.info("module exampleProp is => " + dzjsonkit.exampleProp);
-dzjsonkit.exampleProp = "This is a test value";
+Ti.API.info("module exampleProp is => " + kit.exampleProp);
 
-if (Ti.Platform.name == "android") {
-	var proxy = dzjsonkit.createExample({
-		message: "Creating an example Proxy",
-		backgroundColor: "red",
-		width: 100,
-		height: 100,
-		top: 100,
-		left: 150
-	});
-
-	proxy.printMessage("Hello world!");
-	proxy.message = "Hi world!.  It's me again.";
-	proxy.printMessage("Hello world!");
-	win.add(proxy);
+var jsonObject = {
+	a: 1,
+	b: 2,
+	c: 3,
+	d: {
+		l: 10,
+		m: 11,
+		n: "Hello World String",
+		o: "How are we \n today?"
+	}
 }
+
+var jsonString = JSON.stringify(jsonObject);
+
+console.log(kit.parseString(jsonString));
+
+console.log(kit.stringifyObject(jsonObject));
 

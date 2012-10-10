@@ -85,6 +85,17 @@
 }
 
 #pragma Public APIs
+-(id)parseString:(id)args {
+    return [[args objectAtIndex:0] objectFromJSONString];
+}
+
+-(id)parseData:(id)args {
+    return [[args objectAtIndex:0] objectFromJSONData];
+}
+
+-(TiBlob *)stringifyObject:(id)args {
+    return [[[TiBlob alloc] initWithData:[[args objectAtIndex:0] JSONData] mimetype:@"application/octet-stream"] autorelease];
+}
 
 -(id)example:(id)args
 {
