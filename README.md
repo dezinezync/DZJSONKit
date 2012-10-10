@@ -63,10 +63,10 @@ var stringFromObkect = kit.stringifyObject(jsonObject);
 
 ~~~~
 
-### Note
-It it important to note that the JSONKit library works only with UTF-8 encoded data. If your data is not UTF-8 encoded, or you suspect so, kindly encode it before parsing.  
-  
-  
+### Notes
+- It it important to note that the JSONKit library works only with UTF-8 encoded data. If your data is not UTF-8 encoded, or you suspect so, kindly encode it before parsing.  
+- JSONKit is dual licensed under either the terms of the BSD License, or alternatively under the terms of the Apache License, Version 2.0. Copyright © 2011, John Engelhart. Kindly include the required licenses in your app if using JSONKit.
+- DZJSONKit is published as a no-license module. However, do note that I shall not be responsible for any inconsistencies or damages caused by the inclusion and/or usage of the module, as a whole or in parts.  
   
 *An excerpt from the README docs of JSONKit*
 
