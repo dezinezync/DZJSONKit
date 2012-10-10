@@ -12,7 +12,6 @@ var label = Ti.UI.createLabel();
 win.add(label);
 win.open();
 
-// TODO: write your module tests here
 var kit = require('com.DZJSONKit');
 Ti.API.info("module is => " + kit);
 
