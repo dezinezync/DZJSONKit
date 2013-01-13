@@ -67,7 +67,7 @@ var stringFromObject = kit.stringify(jsonObject);
 #### v0.2 
 - Non-JSON format strings, when parsed, return null.
 - Searlizing JSON Data now returns a string as opposed to a TiBlob, as done in the previous version
-- Renamed methods: `parseString` -> `parse` and `stringifyObject` to `stringify`
+- Renamed methods: `parseString` to `parse` and `stringifyObject` to `stringify`
 
 #### v0.1 Initial launch
 ~~~~
