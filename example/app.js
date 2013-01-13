@@ -8,11 +8,9 @@
 var win = Ti.UI.createWindow({
 	backgroundColor:'white'
 });
-var label = Ti.UI.createLabel();
-win.add(label);
 win.open();
 
-var kit = require('com.DZJSONKit');
+var kit = require('com.dzjsonkit');
 Ti.API.info("module is => " + kit);
 
 var jsonObject = {

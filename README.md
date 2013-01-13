@@ -27,7 +27,7 @@ Register your module with your application by editing `tiapp.xml` and adding you
 Example:
 
 <modules>
-	<module version="0.2">com.DZJSONKit</module>
+	<module version="0.2">com.dzjsonkit</module>
 </modules>
 
 When you run your project, the compiler will know automatically compile in your module
@@ -39,7 +39,7 @@ USING YOUR MODULE IN CODE
 To use your module in code, you will need to require it. 
 
 ~~~~
-var kit = require('com.DZJSONKit');
+var kit = require('com.dzjsonkit');
 ~~~~
 
 Once you have included the module in your code, the module exposes certain methods for interacting with JSON. 
