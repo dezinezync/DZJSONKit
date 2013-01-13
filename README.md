@@ -27,7 +27,7 @@ Register your module with your application by editing `tiapp.xml` and adding you
 Example:
 
 <modules>
-	<module version="0.1">com.DZJSONKit</module>
+	<module version="0.2">com.DZJSONKit</module>
 </modules>
 
 When you run your project, the compiler will know automatically compile in your module
@@ -47,7 +47,7 @@ Once you have included the module in your code, the module exposes certain metho
 ~~~~
 /* To parse a response JSON String:  */
 
-var objectFromString = kit.parseString(jsonString);
+var objectFromString = kit.parse(jsonString);
 
 
 
@@ -59,8 +59,17 @@ var objectFromData = kit.parseData(jsonData);
 
 /* To stringify a valid JSON Object */
 
-var stringFromObkect = kit.stringifyObject(jsonObject);
+var stringFromObject = kit.stringify(jsonObject);
 
+~~~~
+### Version Update notes
+
+#### v0.2 
+- Non-JSON format strings, when parsed, return null.
+- Searlizing JSON Data now returns a string as opposed to a TiBlob, as done in the previous version
+- Renamed methods: `parseString` -> `parse` and `stringifyObject` to `stringify`
+
+#### v0.1 Initial launch
 ~~~~
 
 ### Notes

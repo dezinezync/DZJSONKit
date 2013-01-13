@@ -22,7 +22,7 @@
 // this is generated for your module, please do not change it
 -(NSString*)moduleId
 {
-	return @"com.DZJSONKit";
+	return @"com.dzjsonkit";
 }
 
 #pragma mark Lifecycle
@@ -84,34 +84,19 @@
 	}
 }
 
-#pragma Public APIs
--(id)parseString:(id)args {
-    return [[args objectAtIndex:0] objectFromJSONString];
+#pragma mark Public APIs
+-(id)parse:(id)args {
+	ENSURE_SINGLE_ARG_OR_NIL(args,NSString);
+    return [[TiUtils stringValue:args] objectFromJSONString];
 }
 
 -(id)parseData:(id)args {
+	ENSURE_SINGLE_ARG_OR_NIL(args,NSData);
     return [[args objectAtIndex:0] objectFromJSONData];
 }
 
--(TiBlob *)stringifyObject:(id)args {
-    return [[[TiBlob alloc] initWithData:[[args objectAtIndex:0] JSONData] mimetype:@"application/octet-stream"] autorelease];
-}
-
--(id)example:(id)args
-{
-	// example method
-	return @"hello world";
-}
-
--(id)exampleProp
-{
-	// example property getter
-	return @"hello world";
-}
-
--(void)setExampleProp:(id)value
-{
-	// example property setter
+-(NSString *)stringify:(id)args {
+	return [[args objectAtIndex:0] JSONString];
 }
 
 @end

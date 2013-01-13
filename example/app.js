@@ -15,10 +15,6 @@ win.open();
 var kit = require('com.DZJSONKit');
 Ti.API.info("module is => " + kit);
 
-label.text = kit.example();
-
-Ti.API.info("module exampleProp is => " + kit.exampleProp);
-
 var jsonObject = {
 	a: 1,
 	b: 2,
@@ -29,11 +25,14 @@ var jsonObject = {
 		n: "Hello World String",
 		o: "How are we \n today?"
 	}
-}
+};
 
-var jsonString = JSON.stringify(jsonObject);
+//Test 1 : Stringify the above object
+jsonObject = kit.stringify(jsonObject);
+console.log(jsonObject);
 
-console.log(kit.parseString(jsonString));
+//Test 2 : Parse the jsonObject we converted to a string in the abvoe test
+console.log(kit.parse(jsonObject));
 
-console.log(kit.stringifyObject(jsonObject));
+console.log(kit.parse("Hello World")); //This is not valid JSON. The module should return null.
 
