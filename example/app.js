@@ -10,7 +10,7 @@ var win = Ti.UI.createWindow({
 });
 win.open();
 
-var kit = require('com.dzjsonkit');
+var kit = require('com.DZJSONKit');
 Ti.API.info("module is => " + kit);
 
 var jsonObject = {

@@ -22,7 +22,7 @@
 // this is generated for your module, please do not change it
 -(NSString*)moduleId
 {
-	return @"com.dzjsonkit";
+	return @"com.DZJSONKit";
 }
 
 #pragma mark Lifecycle

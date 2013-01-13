@@ -39,7 +39,7 @@ USING YOUR MODULE IN CODE
 To use your module in code, you will need to require it. 
 
 ~~~~
-var kit = require('com.dzjsonkit');
+var kit = require('com.DZJSONKit');
 ~~~~
 
 Once you have included the module in your code, the module exposes certain methods for interacting with JSON. 
