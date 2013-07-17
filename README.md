@@ -62,6 +62,7 @@ var objectFromData = kit.parseData(jsonData);
 var stringFromObject = kit.stringify(jsonObject);
 
 ~~~~
+
 ### Version Update notes
 
 #### v0.2 
@@ -70,7 +71,6 @@ var stringFromObject = kit.stringify(jsonObject);
 - Renamed methods: `parseString` to `parse` and `stringifyObject` to `stringify`
 
 #### v0.1 Initial launch
-~~~~
 
 ### Notes
 - It it important to note that the JSONKit library works only with UTF-8 encoded data. If your data is not UTF-8 encoded, or you suspect so, kindly encode it before parsing.  
