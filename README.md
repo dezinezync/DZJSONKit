@@ -51,18 +51,16 @@ var objectFromString = kit.parse(jsonString);
 
 
 
-/* To parse JSON response recevied as Data: */
-
-var objectFromData = kit.parseData(jsonData);
-
-
-
 /* To stringify a valid JSON Object */
 
 var stringFromObject = kit.stringify(jsonObject);
 
 ~~~~
 ### Version Update notes
+
+#### v0.3
+- Using GCD to perform parsing and stringifying of data on a background priority thread instead of the main UI thread. This speeds up everything. (Fixes #1)
+- Removed parseData method (rarely or never used).
 
 #### v0.2 
 - Non-JSON format strings, when parsed, return null.
