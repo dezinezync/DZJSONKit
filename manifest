@@ -2,12 +2,12 @@
 # this is your module manifest and used by Titanium
 # during compilation, packaging, distribution, etc.
 #
-version: 0.2
+version: 0.3
 apiversion: 2
 description: iOS Titanium module for insanely rapid JSON data conversions.
 author: Nikhil Nigade (@dezinezync)
 license: Specify your license
-copyright: JSONKit (c) 2011, John Engelhart.
+copyright: JSONKit (c) 2011, John Engelhart
 
 
 # these should not be edited
@@ -15,4 +15,4 @@ name: DZJSONKit
 moduleid: com.DZJSONKit
 guid: 5793126f-1ba8-4236-8830-ac02256c02f6
 platform: iphone
-minsdk: 2.1.4.GA
+minsdk: 3.1.2.GA

@@ -1,5 +1,5 @@
 /**
- * Your Copyright Here
+ * 2012-2013 Nikhil Nigade - Some Rights Reserved
  *
  * Appcelerator Titanium is Copyright (c) 2009-2010 by Appcelerator, Inc.
  * and licensed under the Apache Public License (version 2)
@@ -32,8 +32,8 @@
 	// this method is called when the module is first loaded
 	// you *must* call the superclass
 	[super startup];
-	
-	NSLog(@"[INFO] %@ loaded",self);
+    
+    NSLog(@"[INFO] %@ loaded",self);
 }
 
 -(void)shutdown:(id)sender
@@ -51,7 +51,7 @@
 -(void)dealloc
 {
 	// release any resources that have been retained by the module
-	[super dealloc];
+	//[super dealloc];
 }
 
 #pragma mark Internal Memory Management
@@ -86,17 +86,28 @@
 
 #pragma mark Public APIs
 -(id)parse:(id)args {
-	ENSURE_SINGLE_ARG_OR_NIL(args,NSString);
-    return [[TiUtils stringValue:args] objectFromJSONString];
-}
-
--(id)parseData:(id)args {
-	ENSURE_SINGLE_ARG_OR_NIL(args,NSData);
-    return [[args objectAtIndex:0] objectFromJSONData];
+	
+    ENSURE_SINGLE_ARG(args, NSString);
+    
+    __block NSObject *data = nil;
+    
+    dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        data = [args objectFromJSONString];
+    });
+    
+    return data;
+    
 }
 
 -(NSString *)stringify:(id)args {
-	return [[args objectAtIndex:0] JSONString];
+
+    __block NSString *data = nil;
+    
+    dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        data = [[args objectAtIndex:0] JSONString];
+    });
+    
+    return data;
 }
 
 @end

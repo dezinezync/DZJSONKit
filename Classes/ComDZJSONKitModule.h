@@ -9,6 +9,7 @@
 
 @interface ComDZJSONKitModule : TiModule
 {
+    
 }
 
 @end

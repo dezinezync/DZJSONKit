@@ -25,12 +25,28 @@ var jsonObject = {
 	}
 };
 
+var startTime = new Date().getTime();
+console.log("Starting at " + startTime);
+
+/*DZJSONKit*/
 //Test 1 : Stringify the above object
-jsonObject = kit.stringify(jsonObject);
+var jsonObject = kit.stringify(jsonObject);
 console.log(jsonObject);
 
 //Test 2 : Parse the jsonObject we converted to a string in the abvoe test
 console.log(kit.parse(jsonObject));
 
 console.log(kit.parse("Hello World")); //This is not valid JSON. The module should return null.
+
+/* SBJSON - Native Parser in Ti
+jsonObject = JSON.stringify(jsonObject);
+console.log(jsonObject);
+
+console.log(JSON.parse(jsonObject));
+//console.log(JSON.parse("Hello World")); Ti Throws an Error. Blocks app.
+
+var endTime = new Date().getTime();*/
+
+console.log("Ending at " + endTime);
+console.log("Total time taken " + (endTime -startTime));
 

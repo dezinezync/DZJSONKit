@@ -23,7 +23,7 @@
 
 /* Begin PBXBuildFile section */
 		24DD6CF91134B3F500162E58 /* ComDZJSONKitModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DD6CF71134B3F500162E58 /* ComDZJSONKitModule.h */; };
-		24DD6CFA1134B3F500162E58 /* ComDZJSONKitModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* ComDZJSONKitModule.m */; };
+		24DD6CFA1134B3F500162E58 /* ComDZJSONKitModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* ComDZJSONKitModule.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		24DE9E1111C5FE74003F90F6 /* ComDZJSONKitModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE9E0F11C5FE74003F90F6 /* ComDZJSONKitModuleAssets.h */; };
 		24DE9E1211C5FE74003F90F6 /* ComDZJSONKitModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* ComDZJSONKitModuleAssets.m */; };
 		AA747D9F0F9514B9006C5449 /* ComDZJSONKit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ComDZJSONKit_Prefix.pch */; };
@@ -156,7 +156,7 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "dzjsonkit" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -221,10 +221,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					armv6,
-					armv7,
-				);
 				"ARCHS[sdk=iphoneos*]" = (
 					armv6,
 					armv7,
@@ -270,10 +266,6 @@
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
 				"ARCHS[sdk=iphoneos*]" = (
 					armv6,
 					armv7,
@@ -312,10 +304,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					armv6,
-					armv7,
-				);
 				"ARCHS[sdk=iphoneos*]" = (
 					armv6,
 					armv7,
@@ -341,6 +329,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-DDEBUG",
 					"-DTI_POST_1_2",
@@ -360,10 +349,6 @@
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
 				"ARCHS[sdk=iphoneos*]" = (
 					armv6,
 					armv7,
